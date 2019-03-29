@@ -11,13 +11,13 @@ def main():
 
 def determine_status(score):
     while score < 0 or score > 100:
-        return "Invalid score. Please enter a score from 0 to 100."
+        return "Invalid score"
     if score >= 90:
-        return "excellent."
+        return "Excellent"
     elif score >= 50:
-        return "passable."
+        return "Passable"
     else:
-        return "bad. Try again next time!"
+        return "Bad"
 
 
 main()
