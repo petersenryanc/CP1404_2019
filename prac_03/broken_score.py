@@ -1,6 +1,5 @@
 """
-CP1404/CP5632 - Practical
-Broken program to determine score status
+CP1404 - Practical 3 - broken_score
 """
 
 
