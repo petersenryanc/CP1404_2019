@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 - Practical
+CP1404 - Practical 3 - temperatures
 Convert between Fahrenheit and Celsius
 """
 
