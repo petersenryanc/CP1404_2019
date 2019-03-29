@@ -1,6 +1,6 @@
 """
-CP1404/CP5632 - Practical
-Password checker "skeleton" code to help you get started
+CP1404 - Practical 3
+Test input values for password, display password as asterisks
 """
 
 MIN_LENGTH = 2

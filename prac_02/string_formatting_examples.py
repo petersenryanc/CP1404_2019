@@ -1,2 +1,2 @@
-for i in range(0,101,50):
+for i in range(0, 101, 50):
     print("{0:>3}".format(i))

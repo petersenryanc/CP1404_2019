@@ -1,5 +1,6 @@
 """
 CP1404 - Practical 3 - broken_score
+Enter score and check input range
 """
 
 
