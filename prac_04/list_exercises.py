@@ -1,3 +1,9 @@
+"""
+CP1404 - Practical 4
+Ask user for 5 numbers then print stats about them
+Ask user for username then test against listed usernames
+"""
+
 numbers = []
 for i in range(5):
     i = int(input("Number: "))
