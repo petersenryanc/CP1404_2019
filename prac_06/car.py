@@ -12,6 +12,10 @@ class Car:
         self.fuel = fuel
         self.odometer = 0
 
+    def __str__(self):
+
+
+
     def add_fuel(self, amount):
         """Add amount to the car's fuel."""
         self.fuel += amount
