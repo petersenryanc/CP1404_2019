@@ -1,27 +1,32 @@
-"""
-CP1404 - Practical 6 - Guitars
-"""
-
-YEAR = 2019
-VINTAGE_AGE = 50
+from prac_06.guitar import Guitar
 
 
-class Guitar:
-    def __init__(self, name="", year=0, cost=0):
-        """Initialise guitar"""
-        self.name = name
-        self.year = year
-        self.cost = cost
-        self.age = 2018-year
+def main():
+    guitars = []
 
-    def __str__(self):
-        """Return string representation of guitar"""
-        return "{}({}): ${}".format(self.name, self.year, self.cost)
+    print("My guitars!")
+    name = input("Name: ")
+    while name != "":
+        year = int(input("Year: "))
+        cost = float(input("Cost: "))
+        guitar_add = Guitar(name, year, cost)
+        guitars.append(guitar_add)
+        print(guitar_add, "Added")
+        name = input("Name: ")
 
-    def get_age(self):
-        """Get current age of guitar from constant YEAR"""
-        return YEAR - self.year
+    guitars.append(Guitar("Gibson L-5 CES", 1922, 16035.40))
+    guitars.append(Guitar("Line 6 JTV-59", 2010, 1512.9))
 
-    def is_vintage(self):
-        """Test whether guitar is vintage or not"""
-        return self.age >= VINTAGE_AGE
+    if guitars:
+        guitars.sort()
+        print("Guitars:")
+        for i, guitar in enumerate(guitars):
+            vintage_string = ""
+            if guitar.is_vintage():
+                vintage_string = "(vintage)"
+            print("Guitar {}: {:>20} ({}), worth ${:10,.2f}{}".format(i + 1, guitar.name, guitar.year, guitar.cost,
+                  vintage_string))
+    else:
+        print("No guitars!")
+
+main()

@@ -3,7 +3,7 @@ CP1404 - Practical 6 - Guitars
 Create and call class guitar.py
 """
 
-from prac_06.guitars import Guitar
+from prac_06.guitar import Guitar
 
 
 def main():
@@ -11,6 +11,8 @@ def main():
     name = "Gibson L-5 CES"
     year = 1922
     cost = 16035.40
+    print("My guitar: {0}, first made in {1}".format(name, year))
+    print()
 
     guitar = Guitar(name, year, cost)
     other = Guitar("Another guitar", 2012, 1000)
