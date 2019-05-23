@@ -5,7 +5,7 @@ BoxLayout:
         TextInput:
             id: input_miles
             text: '34'
-            font_size: 48
+            font_size: 36
             multiline: False
 
         BoxLayout:
@@ -15,7 +15,8 @@ BoxLayout:
             Button:
                 text: 'Down'
     Button:
-        text: 'Convert m to km'
+        text: 'Convert miles to km'
+        on_press: app.handle_press()
     Label:
         id: output_label
         font_size: 48

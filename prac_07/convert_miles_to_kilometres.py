@@ -3,6 +3,8 @@ from kivy.lang import Builder
 from kivy.core.window import Window
 from kivy.app import StringProperty
 
+MILES_TO_KM = 1.61
+
 
 class MilestoKilometresApp(App):
     message = StringProperty()
@@ -14,7 +16,17 @@ class MilestoKilometresApp(App):
         return self.root
 
     def handle_press(self):
+        value = self.check_input()
         self.message = self.root.ids.user_input.text
+        result = value * MILES_TO_KM
+        self.root.ids.output_label.text = str(result)
+
+    def check_input(self):
+        try:
+            value = float(self.root.ids.input_miles.text)
+            return value
+        except ValueError:
+            return 0
 
 
 MilestoKilometresApp().run()
